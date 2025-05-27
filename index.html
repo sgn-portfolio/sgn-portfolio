@@ -116,15 +116,51 @@
       margin: 0 auto 1rem auto;
       box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
     }
+
+    /* アニメーション用 */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .thumbnail-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+
+    .thumbnail-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 8px;
+    }
+
+    .video-caption {
+      font-size: 0.9rem;
+      text-align: center;
+      margin-top: 0.5rem;
+    }
+
+    @media (min-width: 768px) {
+      .thumbnail-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
   </style>
 </head>
 <body>
-  <header>
+  <header class="fade-in">
     <h1>Shigeno's portfolio</h1>
     <p>ショート動画で、あなたの魅力を伝える</p>
   </header>
 
-  <section class="about">
+  <section class="about fade-in">
     <h2>About Me</h2>
     <img src="images/profile.JPG" alt="プロフィール写真" class="profile-photo" />
     <p>
@@ -149,105 +185,97 @@
     </ul>
   </section>
 
-  <section class="portfolio">
-  <h2>Portfolio</h2>
+  <section class="portfolio fade-in">
+    <h2>Portfolio</h2>
 
-  <h3>ショート動画</h3>
-  <div class="thumbnail-grid">
-    <div class="thumbnail-item">
-      <a href="https://drive.google.com/file/d/1ASK7VNoBvSy1N3zi7vwRMV82ABSiM-D9/view?usp=drive_link" target="_blank">
-        <img src="images/sample2.jpg" alt="sample2">
-        <p class="video-caption">脱毛クリームのプロモーションサンプル動画<br>Premiere Pro</p>
-      </a>
+    <h3>ショート動画</h3>
+    <div class="thumbnail-grid">
+      <div class="thumbnail-item fade-in">
+        <a href="https://drive.google.com/file/d/1ASK7VNoBvSy1N3zi7vwRMV82ABSiM-D9/view?usp=drive_link" target="_blank">
+          <img src="images/sample2.jpg" alt="sample2">
+          <p class="video-caption">脱毛クリームのプロモーションサンプル動画<br>Premiere Pro</p>
+        </a>
+      </div>
+      <div class="thumbnail-item fade-in">
+        <a href="https://drive.google.com/file/d/1eD7yJs-lvekFTXRHzDujl0o2oGd-bYGo/view?usp=drive_link" target="_blank">
+          <img src="images/sample3.jpg" alt="sample3">
+          <p class="video-caption">美容液のプロモーションサンプル動画<br>After Effects</p>
+        </a>
+      </div>
+      <div class="thumbnail-item fade-in">
+        <a href="https://drive.google.com/file/d/1dHFDfWxXuubvv-eSi-s7S5DsvneqcrJN/view?usp=drive_link" target="_blank">
+          <img src="images/sample4.jpg" alt="sample4">
+          <p class="video-caption">AGAクリニックのショート編集<br>Premiere Pro</p>
+        </a>
+      </div>
+      <div class="thumbnail-item fade-in">
+        <a href="https://drive.google.com/file/d/1AdIBBSzehzjM1MYX7-R0AaU6LhZVz1LB/view?usp=drive_link" target="_blank">
+          <img src="images/sample5.jpg" alt="sample5">
+          <p class="video-caption">不動産物件紹介のショート動画<br>Premiere Pro</p>
+        </a>
+      </div>
+      <div class="thumbnail-item fade-in">
+        <a href="https://drive.google.com/file/d/1mF3jo3dO8XUNaYUV3wnxQLVt2YMDgh3F/view?usp=drive_link" target="_blank">
+          <img src="images/sample6.jpg" alt="sample6">
+          <p class="video-caption">副業紹介のショート動画<br>Premiere Pro</p>
+        </a>
+      </div>
+      <div class="thumbnail-item fade-in">
+        <a href="https://drive.google.com/file/d/1quLQEkx_7h5WQfLNGlVPo_-S_KGONWfA/view?usp=drive_link" target="_blank">
+          <img src="images/sample7.jpg" alt="sample7">
+          <p class="video-caption">シャンプーのプロモーション動画<br>CapCut</p>
+        </a>
+      </div>
+      <div class="thumbnail-item fade-in">
+        <a href="https://drive.google.com/file/d/1h0i_dfIx-CG52he4eu3AAC5PEu91Yro7/view?usp=drive_link" target="_blank">
+          <img src="images/sample8.jpg" alt="sample8">
+          <p class="video-caption">シャンプーのプロモーション動画2<br>CapCut</p>
+        </a>
+      </div>
+      <div class="thumbnail-item fade-in">
+        <a href="https://drive.google.com/file/d/1gMhbmI7gqIlCT3ig1Lc5nag5QiPs2Il2/view?usp=drive_link" target="_blank">
+          <img src="images/sample9.jpg" alt="sample9">
+          <p class="video-caption">転職サイトのプロモーション動画<br>Premiere Pro</p>
+        </a>
+      </div>
     </div>
-    <div class="thumbnail-item">
-      <a href="https://drive.google.com/file/d/1eD7yJs-lvekFTXRHzDujl0o2oGd-bYGo/view?usp=drive_link" target="_blank">
-        <img src="images/sample3.jpg" alt="sample3">
-        <p class="video-caption">美容液のプロモーションサンプル動画<br>After Effects</p>
-      </a>
-    </div>
-    <div class="thumbnail-item">
-      <a href="https://drive.google.com/file/d/1dHFDfWxXuubvv-eSi-s7S5DsvneqcrJN/view?usp=drive_link" target="_blank">
-        <img src="images/sample4.jpg" alt="sample4">
-        <p class="video-caption">AGAクリニックのショート編集<br>Premiere Pro</p>
-      </a>
-    </div>
-    <div class="thumbnail-item">
-      <a href="https://drive.google.com/file/d/1AdIBBSzehzjM1MYX7-R0AaU6LhZVz1LB/view?usp=drive_link" target="_blank">
-        <img src="images/sample5.jpg" alt="sample5">
-        <p class="video-caption">不動産物件紹介のショート動画<br>Premiere Pro</p>
-      </a>
-    </div>
-    <div class="thumbnail-item">
-      <a href="https://drive.google.com/file/d/1mF3jo3dO8XUNaYUV3wnxQLVt2YMDgh3F/view?usp=drive_link" target="_blank">
-        <img src="images/sample6.jpg" alt="sample6">
-        <p class="video-caption">副業紹介のショート動画<br>Premiere Pro</p>
-      </a>
-    </div>
-    <div class="thumbnail-item">
-      <a href="https://drive.google.com/file/d/1quLQEkx_7h5WQfLNGlVPo_-S_KGONWfA/view?usp=drive_link" target="_blank">
-        <img src="images/sample7.jpg" alt="sample7">
-        <p class="video-caption">シャンプーのプロモーション動画<br>CapCut</p>
-      </a>
-    </div>
-    <div class="thumbnail-item">
-      <a href="https://drive.google.com/file/d/1h0i_dfIx-CG52he4eu3AAC5PEu91Yro7/view?usp=drive_link" target="_blank">
-        <img src="images/sample8.jpg" alt="sample8">
-        <p class="video-caption">シャンプーのプロモーション動画2<br>CapCut</p>
-      </a>
-    </div>
-    <div class="thumbnail-item">
-      <a href="https://drive.google.com/file/d/1gMhbmI7gqIlCT3ig1Lc5nag5QiPs2Il2/view?usp=drive_link" target="_blank">
-        <img src="images/sample9.jpg" alt="sample9">
-        <p class="video-caption">転職サイトのプロモーション動画<br>Premiere Pro</p>
-      </a>
-    </div>
-  </div>
 
-  <h3>YouTube動画</h3>
-  <div class="thumbnail-grid">
-    <div class="thumbnail-item">
-      <a href="https://drive.google.com/file/d/1OgDHRjt7n_vdH0JYEwL_1rQDg1dj7PTi/view?usp=drive_link" target="_blank">
-        <img src="images/sample1.jpg" alt="sample1">
-        <p class="video-caption">YouTubeのオープニング用に制作した動画<br>Premiere Pro / Canva</p>
-      </a>
+    <h3>YouTube動画</h3>
+    <div class="thumbnail-grid">
+      <div class="thumbnail-item fade-in">
+        <a href="https://drive.google.com/file/d/1OgDHRjt7n_vdH0JYEwL_1rQDg1dj7PTi/view?usp=drive_link" target="_blank">
+          <img src="images/sample1.jpg" alt="sample1">
+          <p class="video-caption">YouTubeのオープニング用に制作した動画<br>Premiere Pro / Canva</p>
+        </a>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<style>
-.thumbnail-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
-}
-
-.thumbnail-item img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 8px;
-}
-
-.video-caption {
-  font-size: 0.9rem;
-  text-align: center;
-  margin-top: 0.5rem;
-}
-
-@media (min-width: 768px) {
-  .thumbnail-grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-</style>
-
-  <section class="contact">
+  <section class="contact fade-in">
     <h2>Contact</h2>
     <p>お仕事のご依頼・ご相談はこちらから</p>
     <a href="mailto:oniyuri.so@gmail.com">メールで問い合わせる</a>
   </section>
 
-  <footer>© 2025 Shigeno. All rights reserved.</footer>
+  <footer class="fade-in">© 2025 Shigeno. All rights reserved.</footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.1
+      });
+
+      document.querySelectorAll('.fade-in').forEach(el => {
+        observer.observe(el);
+      });
+    });
+  </script>
 </body>
 </html>
